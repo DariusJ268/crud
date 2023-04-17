@@ -14,8 +14,8 @@
     </a>
 
     <div class="row">
-        <div class="col-sm-3"></div>
-        <div class="col-sm-6">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
             <?php if (isset($_SESSION['success'])) {
                 echo
                 '<div class="alert alert-success" role="alert">
@@ -41,7 +41,7 @@
             <?php include "./views/components/sortFilter.php" ?>
             <?php include "./views/components/table.php" ?>
         </div>
-        <div class="col-sm-3"></div>
+        <div class="col-sm-2"></div>
     </div>
 </body>
 

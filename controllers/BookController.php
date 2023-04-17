@@ -33,7 +33,7 @@ class BookController{
 
     public static function update()
     {
-        $book = new Book($_POST['id'], $_POST['title'], $_POST['genre'], $_POST['author_id']);
+        $book = new Book($_POST['id'], $_POST['title'], $_POST['genre'], $_POST['authorId']);
         $book->update();
     }
 

@@ -10,7 +10,7 @@
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
     </div>
     <div class="form-group">
-        <label for="exampleInputEmail1">Autoriaus id (laikina)</label>
+        <label for="exampleInputEmail1">Autoriaus Vardas/Pavarde</label>
         <select class="form-select" name="authorId">
             <?php foreach ($authors as $author) {
                 $seleced = "";
@@ -21,7 +21,7 @@
             }
             ?>
         </select>
-        <?= (isset($_GET['edit'])) ? $book->authorId : "" ?> 
+        <!-- <?= (isset($_GET['edit'])) ? $book->authorId : "" ?>  -->
         <small id="emailHelp" class="form-text text-muted"></small>
     </div>
     <?php if (isset($_GET['edit'])) { ?>
