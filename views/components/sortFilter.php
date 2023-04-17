@@ -16,13 +16,13 @@
             <option value="0">Pasirinkite autorių</option>
             <?php
             foreach ($authors as $author) {
-                echo  '<option value="' . $author->id . '" '. ((isset($_GET['filter']) && $_GET['filter'] ==$author->id ) ? "selected" : "" ) .    '>' . $author->surname . " " . $author->name . '</option>';
+                echo  '<option value="' . $author->id . '" ' . ((isset($_GET['filter']) && $_GET['filter'] == $author->id) ? "selected" : "") .    '>' . $author->surname . " " . $author->name . '</option>';
             }
             ?>
         </select>
     </div>
     <div class="col-2 position-relative">
-        <button class="btn btn-success position-absolute bottom-0" type="submit">search</button>
+        <button class="btn btn-outline-success position-absolute bottom-0" type="submit">Search</button>
     </div>
 
 </form>

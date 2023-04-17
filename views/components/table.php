@@ -55,9 +55,9 @@
                 </form>
             <?php } ?>
         </th>
-        <th>show</th>
-        <th>edit</th>
-        <th>delete</th>
+        <th>Show</th>
+        <th>Edit</th>
+        <th>Delete</th>
     </tr>
     <?php foreach ($books as $key => $book) { ?>
         <tr>
@@ -65,17 +65,17 @@
             <td> <?= $book->title ?></td>
             <td> <?= $book->genre ?></td>
             <td> <?= $book->author->surname . " " . $book->author->name ?></td>
-            <td><button class="btn btn-primary">show</button></td>
+            <td><button class="btn btn-outline-secondary">Show</button></td>
             <td>
                 <form action="" method="get">
                     <input type="hidden" name="id" value="<?= $book->id ?>">
-                    <button class="btn btn-success" name="edit">edit</button>
+                    <button class="btn btn-outline-success" name="edit">Edit</button>
                 </form>
             </td>
             <td>
                 <form action="" method="post">
                     <input type="hidden" name="id" value="<?= $book->id ?>">
-                    <button class="btn btn-danger" name="destroy">delete</button>
+                    <button class="btn btn-outline-danger" name="destroy">Delete</button>
                 </form>
             </td>
         </tr>

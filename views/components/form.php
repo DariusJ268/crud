@@ -26,8 +26,8 @@
     </div>
     <?php if (isset($_GET['edit'])) { ?>
         <input type="hidden" name="id" value="<?= $book->id ?>">
-        <button class="btn btn-success" type="submit" name="update">upgrade it!</button>
+        <button class="btn btn-outline-success" type="submit" name="update">Upgrade it!</button>
     <?php } else { ?>
-        <button class="btn btn-primary" type="submit" name="save">do it!</button>
+        <button class="btn btn-outline-primary" type="submit" name="save">Do it!</button>
     <?php } ?>
 </form>
