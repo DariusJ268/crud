@@ -56,7 +56,7 @@ class Book
                 break;
         }
         $filter = "";
-        if(isset($_GET['filter']) && $_GET['filter'] != 0 && is_numeric($_GET['filter'])){
+        if (isset($_GET['filter']) && $_GET['filter'] != 0 && is_numeric($_GET['filter'])) {
             $filter = "where author_id = "  . $_GET['filter'];
         }
 
@@ -102,7 +102,7 @@ class Book
     {
         $db = new DB();
         $stmt = $db->conn->prepare("UPDATE `books` SET `title`= ?,`genre`=?,`author_id`=? WHERE `id` = ?");
-        $stmt->bind_param("ssii", $this->title, $this->genre, $this->authorId, $this->id);
+        $stmt->bind_param("ssii", $this->title, $this->genre, $this->author->id, $this->id);
         $stmt->execute();
         $stmt->close();
         $db->conn->close();
